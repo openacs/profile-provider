@@ -26,6 +26,12 @@
             <file type="data_model_drop" db_type="oracle" path="sql/oracle/profile-provider-drop.sql"/>
             <file type="data_model" db_type="oracle" path="sql/oracle/profiled-group-create.sql"/>
             <file type="data_model" db_type="oracle" path="sql/oracle/profiled-group-drop.sql"/>
+            <file type="data_model" db_type="postgresql" path="sql/postgresql/profile-provider-contract-create.sql"/>
+            <file type="data_model" db_type="postgresql" path="sql/postgresql/profile-provider-contract-drop.sql"/>
+            <file type="data_model_create" db_type="postgresql" path="sql/postgresql/profile-provider-create.sql"/>
+            <file type="data_model_drop" db_type="postgresql" path="sql/postgresql/profile-provider-drop.sql"/>
+            <file type="data_model" db_type="postgresql" path="sql/postgresql/profiled-group-create.sql"/>
+            <file type="data_model" db_type="postgresql" path="sql/postgresql/profiled-group-drop.sql"/>
         </files>
         <parameters>
         <!-- No version parameters -->
