@@ -1,7 +1,7 @@
 --
 -- Groups that implement the profile provider interface
 --
--- @author <a href="mailto:yon@milliped.com">yon@milliped.com</a>
+-- @author <a href="mailto:yon@openforce.net">yon@openforce.net</a>
 -- @version $Id$
 --
 
