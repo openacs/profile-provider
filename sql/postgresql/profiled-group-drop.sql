@@ -5,7 +5,7 @@
 -- @version $Id$
 --
 
-drop function profiled_group__new(integer,integer,varchar,varchar,varchar,varchar,varchar,timestamp,integer,varchar);
+drop function profiled_group__new(integer,integer,varchar,varchar,varchar,varchar,varchar,timestamptz,integer,varchar);
 
 drop function profiled_group__delete(integer);
 
