@@ -34,7 +34,7 @@ select acs_object_type__create_type(
 
 select define_function_args ('profiled_group__new','group_id,profile_provider,group_name,join_policy,email,url,object_type;profiled_group,creation_date,creation_user,creation_ip');
 
-create function profiled_group__new(integer,integer,varchar,varchar,varchar,varchar,varchar,timestamp,integer,varchar)
+create function profiled_group__new(integer,integer,varchar,varchar,varchar,varchar,varchar,timestamptz,integer,varchar)
 returns integer as '
 DECLARE
 	p_group_id		alias for $1;
