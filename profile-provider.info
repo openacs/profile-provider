@@ -6,18 +6,17 @@
     <pretty-plural>Profile Providers</pretty-plural>
     <initial-install-p>f</initial-install-p>
     <singleton-p>t</singleton-p>
-
+    
     <version name="0.2d" url="http://openacs.org/repository/download/apm/profile-provider-0.2d.apm">
-    <database-support>
-        <database>oracle</database>
-        <database>postgresql</database>
-    </database-support>
-        <owner url="mailto:yon@openforce.net">Yonatan Feldman</owner>
-        <vendor url="http://openforce.net">OpenForce</vendor>
+        <owner url="http://openacs.org">OpenACS</owner>
+        <vendor url="http://openacs.org">OpenACS</vendor>
+        <release-date>2003-11-10</release-date>
 
         <provides url="profile-provider" version="0.2d"/>
-        <requires url="acs-service-contract" version="5.0d1"/>
+        <requires url="acs-service-contract" version="5.0.0a5"/>
 
+        <callbacks>
+        </callbacks>
         <parameters>
         <!-- No version parameters -->
         </parameters>
