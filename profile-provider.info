@@ -7,13 +7,13 @@
     <initial-install-p>f</initial-install-p>
     <singleton-p>t</singleton-p>
     
-    <version name="0.2d" url="http://openacs.org/repository/download/apm/profile-provider-0.2d.apm">
+    <version name="2.0.3" url="http://openacs.org/repository/download/apm/profile-provider-2.0.3.apm">
         <owner url="http://openacs.org">OpenACS</owner>
         <vendor url="http://openacs.org">OpenACS</vendor>
-        <release-date>2003-11-10</release-date>
+        <release-date>2004-03-10</release-date>
 
-        <provides url="profile-provider" version="0.2d"/>
-        <requires url="acs-service-contract" version="5.0.0a5"/>
+        <provides url="profile-provider" version="2.0.3"/>
+        <requires url="acs-service-contract" version="5.0.0b4"/>
 
         <callbacks>
         </callbacks>
