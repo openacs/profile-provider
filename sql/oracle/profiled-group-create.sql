@@ -64,7 +64,7 @@ as
         creation_ip in acs_objects.creation_ip%TYPE default null
     ) return profiled_groups.group_id%TYPE;
 
-    procedure delete (
+    procedure del (
         group_id in profiled_groups.group_id%TYPE
     );
 end profiled_group;
@@ -107,16 +107,16 @@ as
         return v_group_id;
     end new;
 
-    procedure delete (
+    procedure del (
         group_id in profiled_groups.group_id%TYPE
     ) is
     begin
         delete
         from profiled_groups
-        where profiled_groups.group_id = profiled_group.delete.group_id;
+        where profiled_groups.group_id = profiled_group.del.group_id;
 
-        acs_group.delete(group_id);
-    end delete;
+        acs_group.del(group_id);
+    end del;
 end profiled_group;
 /
 show errors

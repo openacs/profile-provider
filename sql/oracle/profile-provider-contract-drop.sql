@@ -27,49 +27,49 @@ begin
     -- drop the methods of this interface
 
     -- name method
-    acs_sc_operation.delete(
+    acs_sc_operation.del(
         contract_name => 'profile_provider',
         operation_name => 'name'
     );
 
-    acs_sc_msg_type.delete(
+    acs_sc_msg_type.del(
         msg_type_name => 'profile_provider.name.InputType'
     );
 
-    acs_sc_msg_type.delete(
+    acs_sc_msg_type.del(
         msg_type_name => 'profile_provider.name.OutputType'
     );
 
     -- prettyName method
-    acs_sc_operation.delete(
+    acs_sc_operation.del(
         contract_name => 'profile_provider',
         operation_name => 'prettyName'
     );
 
-    acs_sc_msg_type.delete(
+    acs_sc_msg_type.del(
         msg_type_name => 'profile_provider.prettyName.InputType'
     );
 
-    acs_sc_msg_type.delete(
+    acs_sc_msg_type.del(
         msg_type_name => 'profile_provider.prettyName.OutputType'
     );
 
     -- render method
-    acs_sc_operation.delete(
+    acs_sc_operation.del(
         contract_name => 'profile_provider',
         operation_name => 'render'
     );
 
-    acs_sc_msg_type.delete(
+    acs_sc_msg_type.del(
         msg_type_name => 'profile_provider.render.InputType'
     );
 
-    acs_sc_msg_type.delete(
+    acs_sc_msg_type.del(
         msg_type_name => 'profile_provider.render.OutputType'
     );
 
     -- create the interface
-    acs_sc_contract.delete(
+    acs_sc_contract.del(
         contract_name => 'profile_provider'
     );
 
