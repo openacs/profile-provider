@@ -15,7 +15,7 @@
         <owner url="mailto:yon@openforce.net">Yonatan Feldman</owner>
         <vendor url="http://openforce.net">OpenForce</vendor>
 
-        <provides url="profile-provider" version="0.1"/>
+        <provides url="profile-provider" version="0.1d"/>
         <requires url="acs-service-contract" version="4.2"/>
 
         <files>
