@@ -7,7 +7,7 @@
     <initial-install-p>f</initial-install-p>
     <singleton-p>t</singleton-p>
 
-    <version name="0.1d" url="http://openacs.org/repository/download/apm/profile-provider-0.1d.apm">
+    <version name="0.2d" url="http://openacs.org/repository/download/apm/profile-provider-0.2d.apm">
     <database-support>
         <database>oracle</database>
         <database>postgresql</database>
@@ -15,8 +15,8 @@
         <owner url="mailto:yon@openforce.net">Yonatan Feldman</owner>
         <vendor url="http://openforce.net">OpenForce</vendor>
 
-        <provides url="profile-provider" version="0.1d"/>
-        <requires url="acs-service-contract" version="4.2"/>
+        <provides url="profile-provider" version="0.2d"/>
+        <requires url="acs-service-contract" version="5.0d1"/>
 
         <parameters>
         <!-- No version parameters -->
