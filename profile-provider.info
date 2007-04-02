@@ -13,7 +13,7 @@
         <release-date>2007-03-31</release-date>
 
         <provides url="profile-provider" version="2.3.0a1"/>
-        <requires url="acs-service-contract" version="5.0.0b4"/>
+        <requires url="acs-service-contract" version="5.3.1a1"/>
 
         <callbacks>
         </callbacks>
