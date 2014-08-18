@@ -34,19 +34,25 @@ select acs_object_type__create_type(
 
 select define_function_args ('profiled_group__new','group_id,profile_provider,group_name,join_policy,email,url,object_type;profiled_group,creation_date,creation_user,creation_ip');
 
-create function profiled_group__new(integer,integer,varchar,varchar,varchar,varchar,varchar,timestamptz,integer,varchar)
-returns integer as '
+
+
+--
+-- procedure profiled_group__new/10
+--
+CREATE OR REPLACE FUNCTION profiled_group__new(
+   p_group_id integer,
+   p_profile_provider integer,
+   p_group_name varchar,
+   p_join_policy varchar,
+   p_email varchar,
+   p_url varchar,
+   p_object_type varchar, -- default 'profiled_group'
+   p_creation_date timestamptz,
+   p_creation_user integer,
+   p_creation_ip varchar
+
+) RETURNS integer AS $$
 DECLARE
-	p_group_id		alias for $1;
-	p_profile_provider	alias for $2;
-	p_group_name		alias for $3;
-	p_join_policy		alias for $4;
-	p_email			alias for $5;
-	p_url			alias for $6;
-	p_object_type		alias for $7;
-	p_creation_date		alias for $8;
-	p_creation_user		alias for $9;
-	p_creation_ip		alias for $10;
 	v_group_id		integer;
 BEGIN
         v_group_id := acs_group__new(
@@ -70,14 +76,23 @@ BEGIN
 
 	return v_group_id;
 END;
-' language 'plpgsql';
+
+$$ LANGUAGE plpgsql;
 
 
-create function profiled_group__new(integer, varchar)
-returns integer as '
+
+
+--
+-- procedure profiled_group__new/2
+--
+CREATE OR REPLACE FUNCTION profiled_group__new(
+   p_profile_provider integer,
+   p_group_name varchar
+) RETURNS integer AS $$
+--
+-- profiled_group__new/2 maybe obsolete, when we define proper defaults for /10
+--
 DECLARE
-	p_profile_provider		alias for $1;
-	p_group_name			alias for $2;
 BEGIN
 	return profiled_group__new(
 	       NULL,
@@ -86,21 +101,27 @@ BEGIN
 	       NULL,
 	       NULL,
 	       NULL,
-	       ''profiled_group'',
+	       'profiled_group',
 	       now(),
 	       NULL,
 	       NULL
 	);
 END;
-' language 'plpgsql';
+
+$$ LANGUAGE plpgsql;
 
 
 select define_function_args('profiled_group__delete','group_id');
 
-create function profiled_group__delete(integer)
-returns integer as '
+
+
+--
+-- procedure profiled_group__delete/1
+--
+CREATE OR REPLACE FUNCTION profiled_group__delete(
+   p_group_id integer
+) RETURNS integer AS $$
 DECLARE
-	p_group_id		alias for $1;
 BEGIN
         delete
         from profiled_groups
@@ -110,5 +131,6 @@ BEGIN
 
 	return 0;
 END;
-' language 'plpgsql';
+
+$$ LANGUAGE plpgsql;
 
