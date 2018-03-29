@@ -7,12 +7,12 @@
     <initial-install-p>f</initial-install-p>
     <singleton-p>t</singleton-p>
     
-    <version name="2.9.1" url="http://openacs.org/repository/download/apm/profile-provider-2.9.1.apm">
+    <version name="2.10.0d0" url="http://openacs.org/repository/download/apm/profile-provider-2.10.0d0.apm">
         <vendor url="http://dotlrn.org">DotLRN Consortium</vendor>
         <maturity>2</maturity>
         <release-date>2017-08-06</release-date>
 
-        <provides url="profile-provider" version="2.9.1"/>
+        <provides url="profile-provider" version="2.10.0d0"/>
         <requires url="acs-service-contract" version="5.9.1"/>
 
         <callbacks>
